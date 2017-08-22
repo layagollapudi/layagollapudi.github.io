@@ -9,4 +9,4 @@ I am a student at the University of Chicago studying Economics and Computer Scie
 
 ### Contact
 
-For any career purposes or project interests, contact me via [email](mailto:layagollapudi@gmail.com)
+For any career purposes or project interests, contact me via [email](mailto:layagollapudi@gmail.com).
