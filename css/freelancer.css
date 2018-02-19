@@ -186,24 +186,53 @@ header.masthead h2 {
 }
 
 
+/*About Me Seciont*/
+
+.aboutme{
+    background-color: #ade6d8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%; 
+    color: #fff;
+}
+
+.aboutmesection{
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
 /*Resume Section*/
 
 .portfolio {
-  margin-bottom: -15px;
+    margin-bottom: -15px;
+}
+
+span.timePeriod{
+    font-style: italic;
+    font-weight: 400;
+}
+
+.toPart{
+    text-align: center;
 }
 
 .resume{
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .resume{
-    margin-left: 10%;
-    margin-right: 10%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 30px 40px;
     background-color: #f6f6f6;
+    font-size: 12px;
 }
+
+.resumeh4{font-size: 21px;}
+.resumeh6{font-size: 15px;}
 
 @media (min-width: 768px) {
   
