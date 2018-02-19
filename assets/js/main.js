@@ -1,1 +1,0 @@
-$("[dataUnderline] a").addClass("underline");
