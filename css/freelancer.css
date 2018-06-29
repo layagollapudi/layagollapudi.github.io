@@ -165,7 +165,7 @@ header.masthead h2 {
 
 .navbar{
     margin:0;
-    padding:0;
+    padding:10px;
     width: 100%;
     text-align: center;
     display: inline-block;
@@ -176,15 +176,24 @@ header.masthead h2 {
     display:inline;
 }
 
-.navbar li a{
+.navbar li{
     padding:25px;
-    color: #ffffff;
+    color: #000000;
     font-size: 25px;
     font-weight: 1000;
     text-decoration: none;
     margin: 0;
+    -o-transition:.25s;
+  -ms-transition:.25s;
+  -moz-transition:.25s;
+  -webkit-transition:.25s;
+    transition:.25s;
 }
 
+.navbar li:hover, .navbar li:active{
+    background-color: #2C3E50;
+    color: #fff;
+}
 
 /*About Me Seciont*/
 

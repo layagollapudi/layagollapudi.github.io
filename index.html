@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
   <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+      <meta name="description" content="Laya Gollapudi: Personal Website">
+      <meta name="author" content="Laya Gollapudi">
 
     <title>Laya Gollapudi</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -24,11 +25,15 @@
     <!-- Custom styles for this template -->
     <!--<link href="css/freelancer.min.css" rel="stylesheet">-->
     <link href="css/freelancer.css" rel="stylesheet">
+      
+    <!--SCRIPTS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
 
   </head>
 
   <body id="page-top">
-      
     <div class="copyright py-4 topfoot">
       <div class="container">
       </div>
@@ -48,10 +53,9 @@
 
       <div class=navbarTop>
           <ul class="navbar">
-                <li><a class="opt1">About</a></li>
-                <li><a class="opt2">Portfolio</a></li>
-                <li><a class="opt3">Resume</a></li>
-                <li><a class="opt4">Contact</a></li>
+              <li><a class='nav1 opt1'>About</a></li>
+                <!--<li><a class="nav1 opt2">Portfolio</a></li>-->
+              <li><a class='nav1 opt3'>Resume</a></li>
             </ul>
       </div>
       
@@ -67,7 +71,7 @@
             <div class="aboutmesection">
                 <h4>Interested in tech - the start?</h4>
                 <p>
-                    I am a current student at the University of Chicago studying Computer Science and Economics. I'm very interested in learning about how technology plays a role in various modern industries. ML / AI Algorithm research, Computer Vision, and Data Systems are fields I would love to get more involved with.
+                    My mother, a software engineer and computer scientist, and my father, a computer and electrical engineer, are by far my two largest inspirations for my interest in technology. Seeing my mom as a strong independent woman in tech and my dad get really excited about testing his companys' new products always kept potentially going down such a route a possibility in the back of my mind. My friends in highschool also were planning on expanding their programming knowledge as well, so  
                 </p>
             </div>
             <div class="aboutmesection">
@@ -80,6 +84,7 @@
                 </p>
             </div>
         </div>
+       
         <div class="resume">
           <div class="toPart">
             <h3>Laya Gollapudi</h3>
@@ -113,7 +118,9 @@
                     <ul class="courses">
                         <li>TTIC 31230 - Fundamentals of Deep Learning</li>
                         <li>CMSC 15100 and 15200 - Introduction to Computer Science</li>
+                        <li>CMSC 15400 - Computer Systems</li>
                         <li>ECON 19800 - Microeconomics</li>
+                        <li>ECON 20000 - Economic Analysis I</li>
                         <li>SOSC 13100, 13200, 13300 - Social Science Inquiry</li>
                         <li>Introduction to C++</li>
                         <li>Discrete Mathematics</li>
@@ -132,6 +139,14 @@
             </div>
             <div class="ressec Experiences">
                 <h4 class="resumeh4">Experiences</h4>
+                <div class="element experience uchicagoits">
+                    <h6 class="resumeh6">UChicago ITS Command Center <span class="timePeriod">Spring 2018 - Current</span></h6>
+                    <ul>
+                        <li>Monitored the quality and status of servers across campus</li>
+                        <li>Developed scripts and automatized multiple procedures within ITS services</li>
+                        <li>Devised algorithms for different testing servies</li>
+                    </ul>
+                </div>
                 <div class="element experience coding4youth">
                     <h6 class="resumeh6">Coding4Youth Instructor <span class="timePeriod">Summer 2017 - December 2017</span></h6>
                     <ul>
@@ -141,7 +156,7 @@
                     </ul>
                 </div>
                 <div class="element experience uncommonhacks">
-                    <h6 class="resumeh6">Uncommon Hacks Board Member <span class="timePeriod">Spring 2017 - Current</span></h6>
+                    <h6 class="resumeh6">Uncommon Hacks Co-Director <span class="timePeriod">Spring 2017 - Current</span></h6>
                     <ul>
                         <li>Systematized structure of and managed organizational budget for the annual UChicago-based Hackathon and related events</li>
                         <li>Made decisions for hackathon-related purchases based on predictions from calculated models and previous data with the help of other team and general board members</li>
@@ -183,6 +198,31 @@
             </div>
         </div>
     </section>
+      
+    <script>
+        var $n1 = $('.nav1');
+        
+        $n1.on('click', function() {
+            var $item = $(this)
+            highlightItem($item);
+        });
+        
+        function highlightItem($item){
+            if($item.hasClass('.opt1')){
+                $('.opt1').addClass('active');
+                $('.opt3').removeClass('active');
+                $('.opt3').hide();
+                 $('.opt1').show();
+            } else if($item.hasClass('.opt3')){
+                $('.opt3').addClass('active');
+                $('.opt1').removeClass('active');
+                $('.opt1').hide();
+                $('.opt3').show();
+            }
+        }
+        
+        
+    </script>
 
     <div class="copyright py-4 text-center text-white">
       <div class="container">
