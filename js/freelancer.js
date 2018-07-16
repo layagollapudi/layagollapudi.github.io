@@ -17,6 +17,36 @@
   });
 });
 
+// Show an element
+var show = function (elem) {
+	var getHeight = function () {
+		elem.style.display = 'block'; // Make it visible
+		var height = elem.scrollHeight + 'px'; // Get it's height
+		elem.style.display = ''; //  Hide it again
+		return height;
+	};
+	var height = getHeight(); // Get the natural height
+	elem.classList.add('active'); // Make the element visible
+	elem.style.height = height; // Update the max-height
+	// Once the transition is complete, remove the inline max-height so the content can scale responsively
+	window.setTimeout(function () {
+		elem.style.height = '';
+	}, 500);
+
+};
+
+// Hide an element
+var hide = function (elem) {
+	elem.style.height = elem.scrollHeight + 'px';
+	// Set the height back to 0
+	window.setTimeout(function () {
+		elem.style.height = '0';
+	}, 1);
+	// When the transition is complete, hide it
+	window.setTimeout(function () {
+		elem.classList.remove('active');
+	}, 500);
+};
 
   //collapsibility
 
@@ -25,13 +55,14 @@
 
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
       var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
+    	if (content.classList.contains('active')) {
+    		hide(content);
+        this.classList.remove('active-block');
+    		return;
+    	}
+    	show(content);
+      this.classList.add('active-block');
     });
   }
 
@@ -51,11 +82,11 @@
     $('.navbar-collapse').collapse('hide');
   });
 
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 80
-  });
+  // // Activate scrollspy to add active class to navbar items on scroll
+  // $('body').scrollspy({
+  //   target: '#mainNav',
+  //   offset: 80
+  // });
 
   //
   // // Modal popup$(function () {

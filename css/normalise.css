@@ -12,6 +12,25 @@ h6 {
   font-family: 'Montserrat';
 }
 
+/* a {
+    text-decoration: none;
+}
+
+a:hover {
+     text-decoration:none;
+     cursor:pointer;
+}
+
+a:active {
+     text-decoration:none;
+     cursor:pointer;
+} */
+
+
+
+/* TODO: Make underline work :) */
+
+
 /*Separator Graphics*/
 
 hr.star-light{
@@ -41,6 +60,11 @@ section h2 {
   section h2 {
     font-size: 3rem;
     line-height: 2.5rem;
+  }
+
+  section{
+    margin-left: 8%;
+    margin-right: 8%;
   }
 }
 
@@ -100,6 +124,31 @@ header.masthead h2 {
 }
 
 
+/*GENERAL BUTTONS*/
+
+div.underline-button{
+  width: 30%;
+  display: inline-block;
+}
+
+button > div > h2 {
+  position: relative;
+  -webkit-transition: font-size 0.5s;
+       -moz-transition: font-size 0.5s;
+         -o-transition: font-size 0.5s;
+            transition: font-size 0.5s;
+  /* text-decoration: none; */
+}
+
+button > div > h2:hover{
+ position: relative;
+ font-size: 250% !important;
+}
+
+.active-block{
+  opacity: 0.5 !important;
+}
+
 /*About Me Seciont*/
 
 .aboutme{
@@ -114,6 +163,7 @@ header.masthead h2 {
 .aboutmesection{
     padding-bottom: 15px;
     padding-top: 15px;
+    color: #fff !important;
 }
 
 /*Resume Section*/
@@ -132,7 +182,7 @@ span.timePeriod{
 }
 
 .resume-container{
-  background-color: #CCCCFF;
+  background-color: #f4c2db;
 }
 
 .resume{
@@ -154,13 +204,17 @@ span.timePeriod{
 
 .sectionheader{
   width: 100%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
   border: none;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .sectionheader{
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
 
 }
 
@@ -169,6 +223,7 @@ span.timePeriod{
 .collapsible {
   cursor: pointer;
   text: white;
+  transition: 350ms;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -176,18 +231,70 @@ span.timePeriod{
   color: rgb(0, 0, 0);
 }
 
-button.active{
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+/* button.active{
+  padding-bottom: 8%;
+  padding-top: 8%;
+  color:black;
+} */
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
   display: none;
+  height: 0;
+  transition: height 500ms ease-in-out;
   overflow: hidden;
 }
 
+.content.active{
+  display: block;
+	height: auto;
+}
+
+
+/*contact*/
+
+.contacts-container, .contacts{
+  background-color:#f2e3c6;
+}
+
+.contacts{
+  display: flex;
+  justify-content: center;
+}
+
+.fa {
+  margin:auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: #ffffff;
+}
+
+i.fa{
+  color: white !important;
+}
+
+.link{
+  border-radius: 50%;
+}
+
+.link:hover{
+    text-decoration: none !important;
+    color: #ffffff !important;
+    background-color: #f7eddb;
+}
+
+
 /*Footer Section*/
+footer{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 
 .footer {
   padding-top: 5rem;
