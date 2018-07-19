@@ -2,9 +2,7 @@ body {
   font-family: 'Lato';
 }
 
-h1,
-h2,
-h3,
+h1,h2,h3,
 h4,
 h5,
 h6 {
@@ -15,18 +13,18 @@ h6 {
 /* a {
     text-decoration: none;
 }
-
 a:hover {
      text-decoration:none;
      cursor:pointer;
 }
-
 a:active {
      text-decoration:none;
      cursor:pointer;
 } */
 
-
+.non-clickable{
+  cursor: default !important;
+}
 
 /* TODO: Make underline work :) */
 
@@ -45,15 +43,32 @@ hr.star-light{
 }
 
 
+/* Header opts*/
+
+h2.section-toggle{
+  color: #ffffff;
+  cursor: pointer !important;
+}
+
+h2.section-toggle:hover{
+  color: #2C3E50;
+  -webkit-transition: color 0.5s;
+       -moz-transition: color 0.5s;
+         -o-transition: color 0.5s;
+            transition: color 0.5s;
+}
+
 /* Section*/
 
 section {
   padding: 10px 0;
+  cursor: default;
 }
 
 section h2 {
   font-size: 2.25rem;
   line-height: 2rem;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -66,6 +81,10 @@ section h2 {
     margin-left: 8%;
     margin-right: 8%;
   }
+}
+
+h2.selected{
+  color: #2C3E50;
 }
 
 /*Buttons*/
@@ -140,7 +159,7 @@ button > div > h2 {
   /* text-decoration: none; */
 }
 
-button > div > h2:hover{
+.collapsible > div > h2:hover{
  position: relative;
  font-size: 250% !important;
 }
@@ -153,11 +172,14 @@ button > div > h2:hover{
 
 .aboutme{
     background-color: #ade6d8;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10%;
-    padding-right: 10%;
-    color: #fff;
+}
+
+.aboutme, .mymusic-container{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #fff;
 }
 
 .aboutmesection{
@@ -262,6 +284,13 @@ span.timePeriod{
   justify-content: center;
 }
 
+.contact-text{
+  color: #ffffff;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10%;
+}
+
 .fa {
   margin:auto;
   padding-top: 20px;
@@ -281,6 +310,7 @@ i.fa{
 
 .link{
   border-radius: 50%;
+  background-color:#f2e3c6;
 }
 
 .link:hover{
@@ -289,6 +319,146 @@ i.fa{
     background-color: #f7eddb;
 }
 
+
+/*Music section*/
+.music-button > h2{
+  font-size: 40px;
+}
+
+.music > p:hover, .music > h4:hover{
+  color: #734f96;
+  -webkit-transition: color 0.5s;
+       -moz-transition: color 0.5s;
+         -o-transition: color 0.5s;
+            transition: color 0.5s;
+}
+
+.music > p, .music > h4{
+  color: white;
+}
+
+.carousel-wrapper{
+  width: 100%;
+  overflow: hidden;
+	position: relative;
+  text-align: center;
+}
+
+.carousel{
+  padding: 5%;
+  text-align:center;
+  position:relative;
+  /* display: inline-block; */
+}
+
+.carousel-elem{
+  display: inline-block;
+  width: 500px;
+  height: 375px;
+  background-color: white;
+  margin: 5%;
+  padding: 5%;
+}
+
+.carousel-elem > a{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.carousel-elem > a > img{
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 564px) and (max-width: 745px) {
+  .carousel-elem{
+    width: 400px;
+    height: 300px;
+  }
+
+  .carousel-elem > a{
+    width: 100%;
+    height: 140px;
+  }
+
+  .carousel-elem > a > img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 290px){
+  .carousel-elem{
+    width: 100%;
+    height: 120px
+  }
+
+  .carousel-elem > a{
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-elem > a > img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 564px) and (min-width: 290px) {
+  .carousel-elem{
+    width: 220px;
+    height: 165px;
+  }
+
+  .carousel-elem > a{
+    width: 100%;
+    height: 140px;
+  }
+
+  .carousel-elem > a > img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.carousel-elem:hover{
+  background-color: #734f96;
+  -webkit-transition: background-color 0.5s;
+       -moz-transition: background-color 0.5s;
+         -o-transition: background-color 0.5s;
+            transition: background-color 0.5s;
+}
+
+.carousel-elem > a:hover{
+    -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(70%);
+}
+
+.carousel-buttons{
+  display: inline-block;
+}
+
+.carousel-next, .carousel-prev{
+  border-width: 2px;
+  border-style: solid;
+  border-color: #734f96;
+  color: #734f96;
+  background-color: #E6E6FA;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.carousel-next:hover, .carousel-prev:hover{
+  border-color: #ffffff;
+  color: #ffffff;
+  -webkit-transition: border-color color 0.5s;
+       -moz-transition: border-color color 0.5s;
+         -o-transition: border-color color 0.5s;
+            transition: border-color color 0.5s;
+}
 
 /*Footer Section*/
 footer{

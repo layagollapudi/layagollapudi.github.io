@@ -18,7 +18,7 @@
 });
 
 // Show an element
-var show = function (elem) {
+var show_slide = function (elem) {
 	var getHeight = function () {
 		elem.style.display = 'block'; // Make it visible
 		var height = elem.scrollHeight + 'px'; // Get it's height
@@ -36,7 +36,7 @@ var show = function (elem) {
 };
 
 // Hide an element
-var hide = function (elem) {
+var hide_slide = function (elem) {
 	elem.style.height = elem.scrollHeight + 'px';
 	// Set the height back to 0
 	window.setTimeout(function () {
@@ -49,20 +49,62 @@ var hide = function (elem) {
 };
 
   //collapsibility
-
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
       var content = this.nextElementSibling;
     	if (content.classList.contains('active')) {
-    		hide(content);
+    		hide_slide(content);
         this.classList.remove('active-block');
     		return;
-    	}
-    	show(content);
-      this.classList.add('active-block');
+    	}else{
+    	   show_slide(content);
+         this.classList.add('active-block');
+         return;
+      }
+    });
+  }
+
+
+
+  //main secitons
+
+  var dict_sections = []; // create an empty array
+
+  dict_sections.push({
+      key: "#toggle-tech",
+      value: "#portfolio"
+  },
+  {
+    key: "#toggle-music",
+    value: "#portfolio-music"
+  });
+
+  // $(document).ready(function() {
+  //   $("#portfolio-music").hide()
+  //   $("#portfolio").show()
+  //   return
+  // });
+
+  var coll2 = document.getElementsByClassName("section-toggle");
+  var i;
+
+  for (i = 0; i < coll2.length; i++) {
+    coll2[i].addEventListener("click", function() {
+    	if (this.classList.contains('selected')) {
+          return;
+    	}else{
+          for(j = 0; j < coll2.length; j++){
+            if((i != j) && (coll2[j].classList.contains('selected'))){
+              coll2[j].classList.remove('selected')
+              (dict_sections[this.id]).hide()
+            }
+          }
+          this.classList.add('selected')
+          (dict_sections[this.id]).show()
+      }
     });
   }
 

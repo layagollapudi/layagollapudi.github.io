@@ -44,7 +44,11 @@
       <div class="container">
         <h1 class="text-uppercase mb-0">Laya Gollapudi</h1>
         <hr class="star-light">
-        <h2 class="text-uppercase mb-0">Aspiring Computer Scientist</h2>
+        <h2 class="text-uppercase mb-0 ">Aspiring Computer Scientist</h2>
+        <h2 class="text-uppercase mb-0 ">Lover of Music</h2>
+        <!-- <h2 id="toggle-tech" class="text-uppercase mb-0 section-toggle selected">Aspiring Computer Scientist</h2>
+        <h2 id="toggle-music" class="text-uppercase mb-0 section-toggle">Lover of Music</h2> -->
+        <!-- <h2 class="text-uppercase mb-0 section-toggle">Hopeful for a better world</h2> -->
     </div>
     </header>
 
@@ -88,6 +92,9 @@
           </div>
         </button>
         <div class='content contacts-container'>
+          <div class='contact-text'>
+            <p>If you'd like to contact me for career purposes, personal, or general tech projects, I'd love to speak with you through any of the channels below:</p>
+          </div>
           <div class='contacts'>
             <a href="https://www.facebook.com/lgollap" class="fa link fa-facebook"></a>
             <a href="mailto:gollapudi.laya@gmail.com" class="fa link fa-envelope"></a>
@@ -244,6 +251,89 @@
         <!--TODO: Add download section with access to Resume -->
 
     </section>
+    <!-- SECTION with MUSIC -->
+
+    <section class="portfolio" id="portfolio-music">
+
+        <button class='sectionheader non-clickable' style="background-color:#efefff; color:#ffffff">
+          <div class='underline-button music-button'>
+            <h2>Music</h2>
+          </div>
+        </button>
+        <div class='mymusic-container' style="background-color:#E6E6FA;">
+          <div class='music aboutmesection'>
+                <h4>My musical origins?</h4>
+                <p>
+                    I started learning Carnatic music, a form of classical Indian music,
+                    when I was about 5 years old. I was very involved from a young age, competing
+                    in competitions and performing at various recitals. Around the same time, I
+                    also took piano lessons, with which I was not as involved with but still
+                    practicing and performing. Later, in elementary school, I started learning
+                    how to play the flute as part of my school band, with which I played both solo
+                    and group performances throughout my K-12 school years.
+                </p>
+                <br />
+                <h4>How have I come to define music?</h4>
+                <p>
+                    I had always loved practicing music as I was instructed by my teachers and gurus,
+                    but I also came to realize how much of my musical interests stemmed from the freedom
+                    I had as a musician and a performer. I most appreciated the freedom of artistry.
+                    I started trying to learn and arrange pieces by ear [thank you very much, perfect
+                    pitch] as well as experiment with composition styles and performance textures. I started
+                    to play around with and mix different styles of music that I was learning together.
+                </p>
+            </div>
+            <div class="carousel-wrapper">
+              <div class='carousel'>
+                <div class='carousel-elem'>
+            		  <a href='https://www.youtube.com/watch?v=OVKzW51g6gE'>
+                    <img src='img/IMG_1579.jpg'/>
+                  </a>
+                  <a>
+
+                  </a>
+                </div>
+                <div class='carousel-elem'>
+                  <a href='https://www.youtube.com/watch?v=nIXj2sOsbiI'>
+                    <img src="img/IMG_20180407_221441_091.jpg" />
+                  </a>
+                </div>
+                <div class='carousel-elem'>
+                  <a href='https://soundcloud.com/saveourworld333/likes'>
+                    <img src="img/IMG_1331.jpg" />
+                  </a>
+                </div>
+                <div class='carousel-elem'>
+                  <a href='https://www.facebook.com/UChicagoSouthAsianMusicEnsemble/videos/606794566349708/'>
+                    <img src="img/SAME.jpg" />
+                  </a>
+                </div>
+            	</div>
+              <div class='carousel-buttons'>
+                <button class="carousel-prev" title="Show previous"><</button>
+            	  <button class="carousel-next" title="Show next">></button>
+              </div>
+            </div>
+      </div>
+      <button class='sectionheader collapsible' style="background-color:#f2e3c6; color:#ffffff">
+        <div class='underline-button'>
+          <h2>Contact</h2>
+        </div>
+      </button>
+      <div class='content contacts-container'>
+        <div class='contact-text'>
+          <p>If you'd like to contact me for music projects or suggestions, I'd love to speak with you through any of the channels below:</p>
+        </div>
+        <div class='contacts'>
+          <a href="https://www.facebook.com/lgollap" class="fa link fa-facebook"></a>
+          <a href="mailto:saveoursouls333@gmail.com" class="fa link fa-envelope"></a>
+        </div>
+    </div>
+    </section>
+
+    <!-- <section class="portfolio" id="portfolio-service">
+
+    </section> -->
 
     <footer class="bg-primary text-white text-center">
   </footer>
@@ -251,6 +341,7 @@
     <div class="copyright py-4 text-center text-white">
       <div class="container">
         <small>Copyright &copy; Laya Gollapudi 2018</small>
+        <small>Copyright 2018 MIT License</small>
       </div>
     </div>
 
@@ -266,6 +357,8 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
+    <script src="js/jquery.js"></script>
+    <script src='js/siema.min.js'></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
@@ -274,8 +367,15 @@
     <script src="js/contact_me.js"></script>
 
     <!--Custom JS-->
-    <script src="js/jquery.js"></script>
     <script src="js/freelancer.js"></script>
+
+    <script>
+    const mySiema = new Siema({
+      selector: '.carousel'
+    });
+    document.querySelector('.carousel-prev').addEventListener('click', () => mySiema.prev());
+    document.querySelector('.carousel-next').addEventListener('click', () => mySiema.next());
+    </script>
 
   </body>
 
