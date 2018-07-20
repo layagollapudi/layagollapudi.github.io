@@ -17,6 +17,27 @@
   });
 });
 
+
+// Main section toggle
+
+$(document).ready(function() {
+  $('#portfolio').show();
+  $('#portfolio-music').hide();
+    $('#toggle-tech').on('click', function() {
+        $('#portfolio').show();
+        $('#portfolio-music').hide();
+        $('#toggle-tech').addClass('head-selected')
+        $('#toggle-music').removeClass('head-selected')
+    });
+
+    $('#toggle-music').on('click', function() {
+        $('#portfolio').hide();
+        $('#portfolio-music').show();
+        $('#toggle-music').addClass('head-selected')
+        $('#toggle-tech').removeClass('head-selected')
+    });
+});
+
 // Show an element
 var show_slide = function (elem) {
 	var getHeight = function () {
@@ -67,48 +88,6 @@ var i;
     });
   }
 
-
-
-  //main secitons
-
-  var dict_sections = []; // create an empty array
-
-  dict_sections.push({
-      key: "#toggle-tech",
-      value: "#portfolio"
-  },
-  {
-    key: "#toggle-music",
-    value: "#portfolio-music"
-  });
-
-  // $(document).ready(function() {
-  //   $("#portfolio-music").hide()
-  //   $("#portfolio").show()
-  //   return
-  // });
-
-  var coll2 = document.getElementsByClassName("section-toggle");
-  var i;
-
-  for (i = 0; i < coll2.length; i++) {
-    coll2[i].addEventListener("click", function() {
-    	if (this.classList.contains('selected')) {
-          return;
-    	}else{
-          for(j = 0; j < coll2.length; j++){
-            if((i != j) && (coll2[j].classList.contains('selected'))){
-              coll2[j].classList.remove('selected')
-              (dict_sections[this.id]).hide()
-            }
-          }
-          this.classList.add('selected')
-          (dict_sections[this.id]).show()
-      }
-    });
-  }
-
-
   // Scroll to top button appear
   $(document).scroll(function() {
     var scrollDistance = $(this).scrollTop();
@@ -118,27 +97,3 @@ var i;
       $('.scroll-to-top').fadeOut();
     }
   });
-
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-  });
-
-  // // Activate scrollspy to add active class to navbar items on scroll
-  // $('body').scrollspy({
-  //   target: '#mainNav',
-  //   offset: 80
-  // });
-
-  //
-  // // Modal popup$(function () {
-  // $('.portfolio-item').magnificPopup({
-  //   type: 'inline',
-  //   preloader: false,
-  //   focus: '#username',
-  //   modal: true
-  // });
-  // $(document).on('click', '.portfolio-modal-dismiss', function(e) {
-  //   e.preventDefault();
-  //   $.magnificPopup.close();
-  // });
