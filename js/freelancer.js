@@ -17,25 +17,29 @@
   });
 });
 
+function sleep(delay) {
+    var start = new Date().getTime();
+    while (new Date().getTime() < start + delay);
+}
 
 // Main section toggle
 
 $(document).ready(function() {
   $('#portfolio').show();
   $('#portfolio-music').hide();
-    $('#toggle-tech').on('click', function() {
-        $('#portfolio').show();
-        $('#portfolio-music').hide();
-        $('#toggle-tech').addClass('head-selected')
-        $('#toggle-music').removeClass('head-selected')
-    });
+  $('#toggle-tech').on('click', function() {
+      $('#portfolio-music').fadeOut(1000);
+      $('#portfolio').fadeIn(1000);
+      $('#toggle-tech').addClass('head-selected')
+      $('#toggle-music').removeClass('head-selected')
+  });
 
-    $('#toggle-music').on('click', function() {
-        $('#portfolio').hide();
-        $('#portfolio-music').show();
-        $('#toggle-music').addClass('head-selected')
-        $('#toggle-tech').removeClass('head-selected')
-    });
+  $('#toggle-music').on('click', function() {
+      $('#portfolio').fadeOut(1000);
+      $('#portfolio-music').fadeIn(1000);
+      $('#toggle-music').addClass('head-selected')
+      $('#toggle-tech').removeClass('head-selected')
+  });
 });
 
 // Show an element
