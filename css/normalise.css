@@ -1,493 +1,137 @@
 body {
   font-family: 'Lato';
+  font-size: 24px;
+  color: white;
+  background-color: #c9f5f5;
 }
 
 h1,h2,h3,
-h4,
-h5,
-h6 {
+h4,h5,h6 {
   font-weight: 700;
   font-family: 'Montserrat';
 }
-
-/* a {
-    text-decoration: none;
+h1 {
+  font-size: 36px;
 }
-a:hover {
-     text-decoration:none;
-     cursor:pointer;
+h6 {
+  font-size: 18px;
 }
-a:active {
-     text-decoration:none;
-     cursor:pointer;
-} */
-
-.non-clickable{
-  cursor: default !important;
+p {
+  font-size: 18px;
 }
 
-/* TODO: Make underline work :) */
-
-
-/*Separator Graphics*/
-
-hr.star-light{
-    max-width: 15rem;
-    padding: 0;
-    text-align: center;
-    border: none;
-    border-top: solid 0.25rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    position: relative;
+.color-green-opacity {
+  background-color: rgb(129, 217, 202);
+}
+.color-green {
+  background-color: rgba(24, 188, 156);
+}
+.color-pink {
+  background-color: rgba(244, 194, 219);
+}
+.color-yellow {
+  background-color: rgba(224, 200, 153);
 }
 
-
-/* Header opts*/
-
-h2.section-toggle{
-  color: #ffffff;
-  cursor: pointer !important;
-}
-
-h2.section-toggle:hover{
-  color: #2C3E50;
-  -webkit-transition: color 0.5s;
-       -moz-transition: color 0.5s;
-         -o-transition: color 0.5s;
-            transition: color 0.5s;
-}
-
-/* Section*/
-
-section {
-  padding: 10px 0;
-  cursor: default;
-}
-
-section h2 {
-  font-size: 2.25rem;
-  line-height: 2rem;
-  cursor: pointer;
-}
-
-@media (min-width: 992px) {
-  section h2 {
-    font-size: 3rem;
-    line-height: 2.5rem;
-  }
-
-  section{
-    margin-left: 8%;
-    margin-right: 8%;
-  }
-}
-
-h2.head-selected{
-  color: #2C3E50;
-}
-
-/*Buttons*/
-
-.scroll-to-top {
-  z-index: 1042;
-  right: 1rem;
-  bottom: 1rem;
-  display: none;
-}
-
-.scroll-to-top a {
-  width: 3.5rem;
-  height: 3.5rem;
-  background-color: rgba(173,230,216, 0.5);
-  line-height: 3.1rem;
-}
-
-@media (min-width: 992px) {
-
-}
-
-/*Header Section*/
-
-.topfoot{
-    height: 60px;
-}
-
-header.masthead {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-header.masthead h1 {
-  font-size: 3rem;
-  line-height: 3rem;
-}
-
-header.masthead h2 {
-  font-size: 1.8rem;
-  font-family: 'Montserrat';
-}
-
-@media (min-width: 992px) {
-  header.masthead {
-    padding-top: calc(6rem + 106px);
-    padding-bottom: 6rem;
-  }
-  header.masthead h1 {
-    font-size: 4.75em;
-    line-height: 4rem;
-  }
-  header.masthead h2 {
-    font-size: 1.75em;
-  }
-}
-
-
-/*GENERAL BUTTONS*/
-
-div.underline-button{
-  width: 30%;
-  display: inline-block;
-}
-
-button > div > h2 {
-  position: relative;
-  -webkit-transition: font-size 0.5s;
-       -moz-transition: font-size 0.5s;
-         -o-transition: font-size 0.5s;
-            transition: font-size 0.5s;
-  /* text-decoration: none; */
-}
-
-.collapsible > div > h2:hover{
- position: relative;
- font-size: 250% !important;
-}
-
-.active-block{
-  opacity: 0.5 !important;
-}
-
-/*About Me Seciont*/
-
-.aboutme{
-    background-color: #ade6d8;
-}
-
-.aboutme, .mymusic-container{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10%;
-  padding-right: 10%;
-  color: #fff;
-}
-
-.aboutmesection{
-    padding-bottom: 15px;
-    padding-top: 15px;
-    color: #fff !important;
-}
-
-/*Resume Section*/
-
-/* .portfolio {
-    margin-bottom: -15px;
-} */
-
-span.timePeriod{
-    font-style: italic;
-    font-weight: 400;
-}
-
-.toPart{
-    text-align: center;
-}
-
-.resume-container{
-  background-color: #f4c2db;
-}
-
-.resume{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.resume{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 30px 40px;
-    background-color: #f6f6f6;
-    font-size: 12px;
-}
-
-.resumeh4{font-size: 21px;}
-.resumeh6{font-size: 15px;}
-
-.sectionheader{
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-  border: none;
-}
-
-@media (max-width: 768px) {
-  .sectionheader{
-    padding-top: 10%;
-    padding-bottom: 10%;
-  }
-
-}
-
-/* collapsibles */
-/* Style the button that is used to open and close the collapsible content */
-.collapsible {
-  cursor: pointer;
-  text: white;
-  transition: 350ms;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  color: rgb(0, 0, 0);
-}
-
-/* button.active{
-  padding-bottom: 8%;
-  padding-top: 8%;
-  color:black;
-} */
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  display: none;
-  height: 0;
-  transition: height 500ms ease-in-out;
+/* The navigation bar */
+.navbar {
   overflow: hidden;
+  z-index: 10;
+
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 50%; /* Full width */
+  opacity: 0.7;
 }
 
-.content.active{
-  display: block;
-	height: auto;
+/* Links inside the navbar */
+.navbar > img {
+  height: 80px;
+  width: 80px;
+
+  transition: color 0.5s ease-in-out;
+  cursor: pointer;
+  padding: 2rem;
+
+  img {
+    color: white;
+    z-index: 11;
+  }
 }
 
-
-/*contact*/
-
-.contacts-container, .contacts{
-  background-color:#f2e3c6;
+/* Change background on mouse-over */
+.navbar > img:hover {
+  color: black;
 }
 
-.contacts{
+.parallax {
+  /* Positioning */
   display: flex;
   justify-content: center;
-}
-
-.contact-text{
-  color: #ffffff;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 10%;
-}
-
-.fa {
-  margin:auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 26px;
-  padding-right: 26px;
-  font-size: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  color: #ffffff;
-}
-
-i.fa{
-  color: white !important;
-}
-
-.link{
-  border-radius: 50%;
-  background-color:#f2e3c6;
-}
-
-.link:hover{
-    text-decoration: none !important;
-    color: #ffffff !important;
-    background-color: #f7eddb;
-}
-
-
-/*Music section*/
-.music-button > h2{
-  font-size: 40px;
-}
-
-.music > p:hover, .music > h4:hover{
-  color: #734f96;
-  -webkit-transition: color 0.5s;
-       -moz-transition: color 0.5s;
-         -o-transition: color 0.5s;
-            transition: color 0.5s;
-}
-
-.music > p, .music > h4{
-  color: white;
-}
-
-.carousel-wrapper{
-  width: 100%;
+  align-items: center;
   overflow: hidden;
-	position: relative;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-transition: background-image 1s ease-in-out;
+  -moz-transition: background-image 1s ease-in-out;
+  -o-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+.parallax > .label {
+  opacity: 1;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-radius: 5rem;
+}
+
+.bg {
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.videos {
+  /* Positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.videos > div {
+  margin: 3rem;
+  opacity: 0.7;
+}
+
+.content {
+  display: flex;
+  padding: 2rem 0;
+  /* opacity: 0.5; */
+}
+.content > * {
+  margin: 0 2rem;
+  vertical-align: middle;
+}
+.content:first-child {
   text-align: center;
 }
 
-.carousel{
-  padding: 5%;
-  text-align:center;
-  position:relative;
-  /* display: inline-block; */
+.resume {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
-
-.carousel-elem{
-  display: inline-block;
-  width: 500px;
-  height: 375px;
-  background-color: white;
-  margin: 5%;
-  padding: 5%;
-}
-
-.carousel-elem > a{
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
-}
-
-.carousel-elem > a > img{
-  width: 100%;
-  height: 100%;
-}
-
-@media (min-width: 564px) and (max-width: 745px) {
-  .carousel-elem{
-    width: 400px;
-    height: 300px;
-  }
-
-  .carousel-elem > a{
-    width: 100%;
-    height: 140px;
-  }
-
-  .carousel-elem > a > img{
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media (max-width: 290px){
-  .carousel-elem{
-    width: 100%;
-    height: 120px
-  }
-
-  .carousel-elem > a{
-    width: 100%;
-    height: 100%;
-  }
-
-  .carousel-elem > a > img{
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media (max-width: 564px) and (min-width: 290px) {
-  .carousel-elem{
-    width: 220px;
-    height: 165px;
-  }
-
-  .carousel-elem > a{
-    width: 100%;
-    height: 140px;
-  }
-
-  .carousel-elem > a > img{
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.carousel-elem:hover{
-  background-color: #734f96;
-  -webkit-transition: background-color 0.5s;
-       -moz-transition: background-color 0.5s;
-         -o-transition: background-color 0.5s;
-            transition: background-color 0.5s;
-}
-
-.carousel-elem > a:hover{
-    -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(70%);
-}
-
-.carousel-buttons{
-  display: inline-block;
-}
-
-.carousel-next, .carousel-prev{
-  border-width: 2px;
-  border-style: solid;
-  border-color: #734f96;
-  color: #734f96;
-  background-color: #E6E6FA;
-  margin-left: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.carousel-next:hover, .carousel-prev:hover{
-  border-color: #ffffff;
-  color: #ffffff;
-  -webkit-transition: border-color color 0.5s;
-       -moz-transition: border-color color 0.5s;
-         -o-transition: border-color color 0.5s;
-            transition: border-color color 0.5s;
-}
-
-/*Footer Section*/
-footer{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: #2C3E50;
-  color: #fff;
-}
-
-.copyright {
-  background-color: #1a252f;
-}
-
-.bg-primary {
-  background-color: #add8e6 !important;
-}
-.bg-secondary {
-  background-color: #adbce6 !important;
-}
-
-.text-primary {
-  color: #18BC9C !important;
-}
-
-.text-secondary {
-  color: #2C3E50 !important;
+.resume:hover {
+  text-decoration: none;
+  color: black;
 }
