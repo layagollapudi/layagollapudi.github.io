@@ -35,8 +35,11 @@ p {
 
 /* The navigation bar */
 .navbar {
-  overflow: hidden;
   z-index: 10;
+  overflow: hidden;
+
+  margin-left: 1rem;
+  margin-top: 1rem;
 
   display: flex;
   align-items: flex-end;
@@ -44,8 +47,47 @@ p {
 
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  width: 50%; /* Full width */
+
   opacity: 0.7;
+
+  background-color: #c9f5f5;
+  border-radius: 5rem;
+}
+
+.openbtn {
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Stay on top */
+  cursor: pointer;
+  background-color: #c9f5f5;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin: 1rem;
+  border: none;
+}
+
+.mobile-navbar {
+  width: 0; /* 0 width - change this with JavaScript */
+
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Stay on top */
+  top: 0;
+  left: 0;
+
+  opacity: 0.7;
+  color: black;
+  background-color: #c9f5f5;
+  overflow: hidden;
+
+  padding-top: 0.5rem;
+  transition: 0.5s;
+}
+.mobile-navbar > * {
+  height: 80px;
+  width: 80px;
+
+  transition: color 0.5s ease-in-out;
+  cursor: pointer;
+  padding: 2rem;
 }
 
 /* Links inside the navbar */
@@ -134,4 +176,39 @@ p {
 .resume:hover {
   text-decoration: none;
   color: black;
+}
+
+@@media only screen and (min-width: 600px) {
+  .for-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  .parallax > .label {
+    width: 90%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .non-mobile {
+    display: none;
+  }
+
+  .for-mobile {
+    display: block;
+  }
 }

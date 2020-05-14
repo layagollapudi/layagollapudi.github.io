@@ -27,13 +27,24 @@
   </head>
 
   <body>
-    <div class="navbar">
+    <div class="navbar non-mobile">
       <img src="img/fb.svg" onclick="location.href='https://www.facebook.com/lgollap/';"/>
       <img src="img/linkedin.svg" onclick="location.href='https://www.linkedin.com/in/laya-gollapudi-a47055135/';"/>
       <img src="img/insta.svg" onclick="location.href='https://www.instagram.com/lgollap/';"/>
       <img src="img/medium.svg" onclick="location.href='https://medium.com/@gollapudi.laya';"/>
       <img src="img/github.svg" onclick="location.href='https://github.com/layagollapudi';"/>
     </div>
+
+    <div id="mobile-navbar" class="mobile-navbar for-mobile">
+      <div class="closebtn" onclick="closeNav()">&times;</div>
+      <img src="img/fb.svg" onclick="location.href='https://www.facebook.com/lgollap/';"/>
+      <img src="img/linkedin.svg" onclick="location.href='https://www.linkedin.com/in/laya-gollapudi-a47055135/';"/>
+      <img src="img/insta.svg" onclick="location.href='https://www.instagram.com/lgollap/';"/>
+      <img src="img/medium.svg" onclick="location.href='https://medium.com/@gollapudi.laya';"/>
+      <img src="img/github.svg" onclick="location.href='https://github.com/layagollapudi';"/>
+    </div>
+
+    <button id="openbtn" class="openbtn for-mobile" onclick="openNav()">&#9776;</button>
 
     <div
       class="parallax imagecarousel"
@@ -57,7 +68,7 @@
       </div>
     </div>
 
-    <div class="videos">
+    <div class="videos non-mobile">
       <div>
         <iframe
           width="560" height="315"
@@ -111,7 +122,7 @@
       </div>
       <div>
         <p>If you think that I would be a good fit for any opportunities related to my interests or would like to chat about any general professional inquiries, feel free to contact me via email or any of my socials!</p>
-        <p>You can also download my resume <a class="resume" href="resume.pdf" download>HERE</a>!</p>
+        <p class="non-mobile">You can also download my resume <a class="resume" href="resume.pdf" download>HERE</a>!</p>
       </div>
     </div>
 
@@ -120,6 +131,17 @@
 
     <script>
     function sendEmail(){window.location = "mailto:gollapudi.laya@gmail.com";}
+
+    function openNav() {
+      document.getElementById("mobile-navbar").style.width = "90px";
+      document.getElementById("openbtn").style.display = "none";
+    }
+
+    /* Set the width of the sidebar to 0 (hide it) */
+    function closeNav() {
+      document.getElementById("mobile-navbar").style.width = "0";
+      document.getElementById("openbtn").style.display = "block";
+    }
 
     $(document).ready(function(){
       setInterval(swapImages, 4000);
