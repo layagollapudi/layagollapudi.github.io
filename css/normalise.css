@@ -178,7 +178,7 @@ p {
   color: black;
 }
 
-@@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
   .for-mobile {
     display: none;
   }
