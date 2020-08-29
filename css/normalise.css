@@ -39,7 +39,7 @@ p {
   overflow: hidden;
 
   margin-left: 1rem;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 
   display: flex;
   align-items: flex-end;
@@ -51,7 +51,11 @@ p {
   opacity: 0.7;
 
   background-color: #c9f5f5;
-  border-radius: 5rem;
+
+  border-bottom-right-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  border-top-right-radius: 0rem;
+  border-top-left-radius: 0rem;
 }
 
 .openbtn {

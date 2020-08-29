@@ -55,7 +55,7 @@
       <div class="label color-green">
         <h1>LAYA GOLLAPUDI</h1>
         <h6 style="cursor: pointer; color: black" onclick="sendEmail()">gollapudi.laya@gmail.com</h6>
-    </div>
+      </div>
     </div>
 
     <div class="content bg">
@@ -67,37 +67,6 @@
         <p>I'm very interested in learning about how technology plays a role in various modern industries.
         Specific topics of interest include audio-related machine learning, sound-based human-computer interaction, and large scale data analysis.</p>
         <p>In my free time, my hobbies include singing, playing the piano, leisure walks, composing music, and watching movies.</p>
-      </div>
-    </div>
-
-    <div class="videos non-mobile">
-      <div>
-        <iframe
-          width="560" height="315"
-          src="https://www.youtube.com/embed/DWrqfL6wDfc?autoplay=0&showinfo=0&controls=0"
-        >
-        </iframe>
-      </div>
-      <div>
-        <iframe
-          width="560" height="315"
-          src="https://www.youtube.com/embed/LJJ-9JWV5dY?autoplay=0&showinfo=0&controls=0"
-        >
-        </iframe>
-      </div>
-      <div>
-        <iframe
-          width="560" height="315"
-          src="https://www.youtube.com/embed/E3Mud8Yn7jI?autoplay=0&showinfo=0&controls=0"
-        >
-        </iframe>
-      </div>
-      <div>
-        <iframe
-          width="560" height="315"
-          src="https://www.youtube.com/embed/nIXj2sOsbiI?autoplay=0&showinfo=0&controls=0"
-        >
-        </iframe>
       </div>
     </div>
 
@@ -145,22 +114,15 @@
       document.getElementById("openbtn").style.display = "block";
     }
 
+
+
     $(document).ready(function(){
       setInterval(swapImages, 4000);
       setInterval(swapImages2, 10000);
 
-      var pictures = [
-        'url(img/IMG_1332.jpg)',
-        'url(img/IMG_1579.jpg)',
-        'url(img/IMG_4358.jpg)',
-      ];
+      var pictures = ['url(img/IMG_1332.jpg)', 'url(img/IMG_1579.jpg)', 'url(img/IMG_4358.jpg)'];
+      var pictures2 = ['url(img/IMG_2018.png)', 'url(img/IMG_6572.png)', 'url(img/IMG_2409.png)', 'url(img/IMG_7654.png)'];
 
-      var pictures2 = [
-        'url(img/IMG_2018.png)',
-        'url(img/IMG_6572.png)',
-        'url(img/IMG_2409.png)',
-        'url(img/IMG_7654.png)',
-      ];
       var picIndex = 0;
       var picIndex2 = 0;
 
