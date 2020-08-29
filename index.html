@@ -27,14 +27,6 @@
   </head>
 
   <body>
-    <div class="navbar non-mobile">
-      <img src="img/fb.svg" onclick="location.href='https://www.facebook.com/lgollap/';"/>
-      <img src="img/linkedin.svg" onclick="location.href='https://www.linkedin.com/in/laya-gollapudi-a47055135/';"/>
-      <img src="img/insta.svg" onclick="location.href='https://www.instagram.com/lgollap/';"/>
-      <img src="img/medium.svg" onclick="location.href='https://medium.com/@gollapudi.laya';"/>
-      <img src="img/github.svg" onclick="location.href='https://github.com/layagollapudi';"/>
-    </div>
-
     <div id="mobile-navbar" class="mobile-navbar for-mobile">
       <div class="closebtn" onclick="closeNav()">&times;</div>
       <img src="img/fb.svg" onclick="location.href='https://www.facebook.com/lgollap/';"/>
@@ -50,11 +42,18 @@
 
     <div
       class="parallax imagecarousel"
-      style="background-image: url(img/IMG_1332.jpg); opacity: 0.5; height: 600px"
+      style="background-image: url(img/cuties.png); opacity: 0.5; height: 600px"
     >
       <div class="label color-green">
         <h1>LAYA GOLLAPUDI</h1>
         <h6 style="cursor: pointer; color: black" onclick="sendEmail()">gollapudi.laya@gmail.com</h6>
+        <div class="navbar non-mobile">
+          <img src="img/fb.svg" onclick="location.href='https://www.facebook.com/lgollap/';"/>
+          <img src="img/linkedin.svg" onclick="location.href='https://www.linkedin.com/in/laya-gollapudi-a47055135/';"/>
+          <img src="img/insta.svg" onclick="location.href='https://www.instagram.com/lgollap/';"/>
+          <img src="img/medium.svg" onclick="location.href='https://medium.com/@gollapudi.laya';"/>
+          <img src="img/github.svg" onclick="location.href='https://github.com/layagollapudi';"/>
+        </div>
       </div>
     </div>
 
@@ -97,9 +96,6 @@
       </div>
     </div>
 
-    <script async src="https://www.youtube.com/iframe_api"></script>
-    <script async src="js/video.js"></script>
-
     <script>
     function sendEmail(){window.location = "mailto:gollapudi.laya@gmail.com";}
 
@@ -114,35 +110,40 @@
       document.getElementById("openbtn").style.display = "block";
     }
 
+    function preloadImages(pictures){
+      var preloadedImages = [];
+
+      for(i=0; i<pictures.length; i++){
+        preloadedImages[i] = new Image();
+        preloadedImages[i].src = pictures[i];
+      }
+
+      return preloadedImages;
+    }
 
 
     $(document).ready(function(){
-      setInterval(swapImages, 4000);
-      setInterval(swapImages2, 10000);
+      var pictures = preloadImages(['img/IMG_1332.png', 'img/IMG_1579.png', 'img/IMG_4358.png']);
+      var pictures2 = preloadImages(['img/IMG_2018.png', 'img/IMG_6572.png', 'img/IMG_2409.png', 'img/IMG_7654.png']);
 
-      var pictures = ['url(img/IMG_1332.jpg)', 'url(img/IMG_1579.jpg)', 'url(img/IMG_4358.jpg)'];
-      var pictures2 = ['url(img/IMG_2018.png)', 'url(img/IMG_6572.png)', 'url(img/IMG_2409.png)', 'url(img/IMG_7654.png)'];
+      var i1 = 0;
+      var i2 = 0;
 
-      var picIndex = 0;
-      var picIndex2 = 0;
-
-      function swapImages(){
-          var pictureLoc = $('.imagecarousel');
-          pictureLoc.css("background-image", pictures[picIndex]);
-          picIndex = picIndex + 1;
-          if (picIndex >= pictures.length) {
-            picIndex = 0;
-          }
-      }
-
-      function swapImages2(){
-        var pictureLoc = $('.imagecarousel2');
-        pictureLoc.css("background-image", pictures2[picIndex2]);
-        picIndex2 = picIndex2 + 1;
-        if (picIndex2 >= pictures.length) {
-          picIndex2 = 0;
+      setInterval(function(){
+        $('.imagecarousel').css("background-image", "url("+pictures[i1].src+")");
+        i1 = i1 + 1;
+        if (i1 >= pictures.length) {
+          i1 = 0;
         }
-      }
+      }, 6000);
+
+      setInterval(function(){
+        $('.imagecarousel2').css("background-image", "url("+pictures2[i2].src+")");
+        i2 = i2 + 1;
+        if (i2 >= pictures2.length) {
+          i2 = 0;
+        }
+      }, 10000);
     });
 
     $(window).scroll(function() {

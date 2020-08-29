@@ -35,27 +35,26 @@ p {
 
 /* The navigation bar */
 .navbar {
-  z-index: 10;
-  overflow: hidden;
+  margin-bottom: 10px;
+}
 
-  margin-left: 1rem;
-  /* margin-top: 1rem; */
+/* Links inside the navbar */
+.navbar > img {
+  height: 50px;
+  width: 50px;
 
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  transition: filter 0.1s ease-in-out;
+  cursor: pointer;
+  padding: 1rem;
 
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  color: white;
+  filter: invert(0%);
+}
 
-  opacity: 0.7;
-
-  background-color: #c9f5f5;
-
-  border-bottom-right-radius: 5rem;
-  border-bottom-left-radius: 5rem;
-  border-top-right-radius: 0rem;
-  border-top-left-radius: 0rem;
+/* Change background on mouse-over */
+.navbar > img:hover {
+  color: black;
+  filter: invert(90%);
 }
 
 .openbtn {
@@ -92,26 +91,6 @@ p {
   transition: color 0.5s ease-in-out;
   cursor: pointer;
   padding: 2rem;
-}
-
-/* Links inside the navbar */
-.navbar > img {
-  height: 80px;
-  width: 80px;
-
-  transition: color 0.5s ease-in-out;
-  cursor: pointer;
-  padding: 2rem;
-
-  img {
-    color: white;
-    z-index: 11;
-  }
-}
-
-/* Change background on mouse-over */
-.navbar > img:hover {
-  color: black;
 }
 
 .parallax {
